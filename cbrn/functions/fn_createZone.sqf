@@ -1,4 +1,4 @@
-params [["_pos", [0,0,0]], ["_threatLevel", 1, [0]], ["_size",100],["_falloffArea",50]];
+params [["_pos", [0,0,0]], ["_threatLevel", 1, [0]], ["_size",100], ["_falloffArea",50]];
 
 if !(isServer) exitWith {};
 if (_pos isEqualTo [0,0,0] || {_threatLevel < 1}) exitWith {};
