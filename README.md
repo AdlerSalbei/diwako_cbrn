@@ -102,12 +102,12 @@ This will create a threat level 3.5 (Orange) zone around position _pos with tota
 
 ## Descritpion.ext
 class CfgFunctions {
-    #include "node_modules\diwako_cbrn\functions.hpp"
+    #include "node_modules\diwako_cbrn\cfgFunctions.hpp"
 };
 
 class CfgSounds {
     sounds[] = {};
-    #include "node_modules\diwako_cbrn\sounds\sounds.hpp"
+    #include "node_modules\diwako_cbrn\sounds\cfgSounds.hpp"
 };
 
 class RscTitles {
