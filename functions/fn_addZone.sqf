@@ -1,6 +1,6 @@
 params["_trigger", ["_unit", ace_player], ["_add", false]];
 
-private _zones = _unit getVariable ["cbrn_zones", []];
+private _zones = _unit getVariable ["diwako_cbrn_zones", []];
 
 if(_add) then {
     _zones pushBack _trigger;
@@ -8,4 +8,4 @@ if(_add) then {
     _zones = _zones - [_trigger];
 };
 
-_unit setVariable ["cbrn_zones", _zones, true];
+_unit setVariable ["diwako_cbrn_zones", _zones, true];

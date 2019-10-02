@@ -4,9 +4,9 @@
 #endif
 
 class cbrn{
-    tag="cbrn";
+    tag="diwako_cbrn";
     class functions{
-        file = MODULES_DIRECTORY\cbrn\functions;
+        file = MODULES_DIRECTORY\diwako_cbrn\functions;
         class init{postInit=1;};
         class startOxygen{};
         class addZone{};

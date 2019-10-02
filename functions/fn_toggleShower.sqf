@@ -3,7 +3,7 @@ params ["_shower", ["_on", false]];
 if !(hasInterface) exitWith {};
 
 if (_on) then {
-    if (_shower getVariable ["cbrn_water", 120] isEqualTo 0) exitWith {};
+    if (_shower getVariable ["diwako_cbrn_water", 120] isEqualTo 0) exitWith {};
 
     private _particles    = [];
     private _power = 1.4;
@@ -48,16 +48,16 @@ if (_on) then {
     _trg setTriggerArea [1, 1, (getDir _shower), true, 1];
     _trg setTriggerActivation ["ANYPLAYER", "PRESENT", true];
     _trg setTriggerTimeout [5, 5, 5, true];
-    _trg setTriggerStatements ["ace_player getVariable ['cbrn_autoDamage', false] && { !(ace_player getVariable ['cbrn_stoppedAutoDamage', false]) && {ace_player in thisList}}", "ace_player setVariable ['cbrn_stoppedAutoDamage', true]; 'Success!' hintC 'The contamination stopped, it should have not come to this in the first place!'", ""];
+    _trg setTriggerStatements ["ace_player getVariable ['diwako_cbrn_autoDamage', false] && { !(ace_player getVariable ['diwako_cbrn_stoppedAutoDamage', false]) && {ace_player in thisList}}", "ace_player setVariable ['diwako_cbrn_stoppedAutoDamage', true]; 'Success!' hintC 'The contamination stopped, it should have not come to this in the first place!'", ""];
     _particles pushBack _trg;
 
     // Update objects list to delete
-    _shower setVariable ["cbrn_objects",[_sound] + _particles];
+    _shower setVariable ["diwako_cbrn_objects",[_sound] + _particles];
 
-    if (isNull (_shower getVariable ["cbrn_puddle", objNull])) then {
+    if (isNull (_shower getVariable ["diwako_cbrn_puddle", objNull])) then {
         private _waterPuddle = createSimpleObject ["a3\Props_F_Enoch\Military\Decontamination\WaterSpill_01_Small_F.p3d", (getPosWorld _shower) vectorAdd [0,0,-1.2], true];
         _waterPuddle setDir (random 360);
-        _shower setVariable ["cbrn_puddle", _waterPuddle];
+        _shower setVariable ["diwako_cbrn_puddle", _waterPuddle];
         [{deleteVehicle _this}, _waterPuddle, 180] call CBA_fnc_waitAndExecute;
     };
 } else {
@@ -65,6 +65,6 @@ if (_on) then {
         // Current result is saved in variable _x
         detach _x;
         deleteVehicle _x;
-    } forEach (_shower getVariable ["cbrn_objects",[]]);
+    } forEach (_shower getVariable ["diwako_cbrn_objects",[]]);
     _shower animateSource ["Hide_Mist_Source",1,true];
 };
