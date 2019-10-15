@@ -7,6 +7,6 @@ _pos = _pos call CBA_fnc_getPos;
 
 ["diwako_cbrn_createZone", [_pos, _threatLevel, _size, _falloffArea]] call CBA_fnc_globalEventJip;
 if ((_size + _falloffArea) > diwako_cbrn_zoneSimulationRange) then {
-    cbrn_zoneSimulationRange = _size + _falloffArea + 50;
+    diwako_cbrn_zoneSimulationRange = _size + _falloffArea + 50;
     publicVariable "diwako_cbrn_zoneSimulationRange";
 };

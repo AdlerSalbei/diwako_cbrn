@@ -2,7 +2,7 @@
     #define MODULES_DIRECTORY node_modules
 #endif
 
-class cbrn{
+class diwako_cbrn{
     tag="diwako_cbrn";
     class functions{
         file = MODULES_DIRECTORY\diwako_cbrn\functions;

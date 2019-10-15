@@ -1,12 +1,12 @@
 diwako_cbrn_maxDamage = 100; // how much damage before death, 50% starts internal contamination
 diwako_cbrn_backpacks = ["B_SCBA_01_F"];
-diwako_cbrn_suits = ["U_C_diwako_cbrn_Suit_01_Blue_F",
-    "U_B_diwako_cbrn_Suit_01_MTP_F",
-    "U_B_diwako_cbrn_Suit_01_Tropic_F",
-    "U_C_diwako_cbrn_Suit_01_White_F",
-    "U_B_diwako_cbrn_Suit_01_Wdl_F",
-    "U_I_diwako_cbrn_Suit_01_AAF_F",
-    "U_I_E_diwako_cbrn_Suit_01_EAF_F"
+diwako_cbrn_suits = ["U_C_cbrn_Suit_01_Blue_F",
+    "U_B_cbrn_Suit_01_MTP_F",
+    "U_B_cbrn_Suit_01_Tropic_F",
+    "U_C_cbrn_Suit_01_White_F",
+    "U_B_cbrn_Suit_01_Wdl_F",
+    "U_I_cbrn_Suit_01_AAF_F",
+    "U_I_E_cbrn_Suit_01_EAF_F"
 ];
 diwako_cbrn_masks = ["G_AirPurifyingRespirator_02_black_F",
     "G_AirPurifyingRespirator_02_olive_F",
